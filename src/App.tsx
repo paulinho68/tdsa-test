@@ -1,13 +1,13 @@
 import { CSSReset } from "@chakra-ui/react";
-import { Login } from "./pages/login";
+import { MainRouter as Routes } from "./routes";
 
-function App() {
+const App = () => {
   return (
     <>
       <CSSReset />
-      <Login />
+      <Routes />
     </>
   );
-}
+};
 
 export default App;
