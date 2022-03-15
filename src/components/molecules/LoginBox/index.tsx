@@ -37,7 +37,6 @@ export const LoginBox = ({
 }: LoginBoxProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword(!showPassword);
-  console.log(register);
   return (
     <Box
       bg="#FEFEFE"

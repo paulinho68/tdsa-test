@@ -1,17 +1,14 @@
-import { Input, InputProps } from "@chakra-ui/react";
-import React, { ReactNode, useRef } from "react";
+import { Input, InputProps, forwardRef } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
 interface BasicInputProps extends InputProps {
   children?: ReactNode;
 }
-
-export const BasicInput = React.forwardRef(
+export const BasicInput = forwardRef<InputProps, "input">(
   ({ children, ...rest }: BasicInputProps, ref) => {
-    console.log(rest);
-    const node = useRef<HTMLInputElement>(null);
     return (
       <Input
-        ref={node}
+        ref={ref}
         p="5px 5px 5px 10px"
         borderColor="#3C5192"
         fontSize="16px"
